@@ -15,6 +15,11 @@ class PrincipalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal)
 
+        val gato = AnimalDomestico(nomeRaca = AnimalEspecie.MAMIFEROS, tempoDeVida = 18, nome = "Frajola", idade = 2, sexo = Genero.MASCULINO)
+
+        val descricao = gato.descricaoAnimal()
+        println(descricao)
+
         val gol = Carro(nome = "Gol", ano = 2015, cor = CarroCor.VERMELHO)
         gol.acelerar()
         val descricaoCarro = gol.buscarDescricaoCompleta()
